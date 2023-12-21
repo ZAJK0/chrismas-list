@@ -1,0 +1,19 @@
+li a {
+    color: green;
+}
+
+body {
+    background-image: url(images/background.jpeg);
+    background-size: cover;
+}
+
+label{
+    width: 7rem !important;
+
+}
+
+.nadpis{
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+}

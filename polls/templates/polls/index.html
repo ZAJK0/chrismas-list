@@ -1,0 +1,32 @@
+
+{% include 'navbar.html' %}
+    <h1 class="nadpis">Vianocne nakupy</h1>
+    <a href="add" class="d-flex btn btn-light w-25 justify-self-center">
+        pridat darcek
+    </a>
+    <ul class="d-flex justify-content-center">
+    {% for darcek in darceks %}
+    <li class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{darcek.pre}}</h5>
+          <h2 class="card-text fs-1"><b> {{darcek.nazov}}</b></h2>
+          <a href="#" class="btn btn-info">Edit</a>
+          {% extends 'delete.html' %}
+          <a href={{darcek.link}} class="btn btn-success">vybavené</a>
+          <a href={{darcek.link}} class="btn btn-primary">{{darcek.cena}}€</a>
+        </div>
+    </li>
+    {% endfor %}
+    </ul>
+
+    <!-- {% if latest_question_list %}
+        <ul>
+        {% for question in latest_question_list %}
+            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %} -->
+</body>
+</html>
